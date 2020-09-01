@@ -63,10 +63,6 @@ https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.show u
 .*\.blog\.caixin\.com/.* url script-response-body Caixin.js
 
 
-;hostname= www\.baidu\.com.*, www\.baidu\.com.*
-
-www\.baidu\.com.* url script-response-body Endless Google And Baidu.user.js
-www\.baidu\.com.* url script-response-body Endless Google And Baidu.user.js
 
 #哔哩哔哩全部解锁规则
 
