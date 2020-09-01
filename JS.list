@@ -128,10 +128,10 @@ https://zhuanlan\.zhihu\.com/p/ url response-body apple\-itunes\-app response-bo
 ^https?+:\/\/jump2\.bdimg\.com\/(?>f|p) url script-response-body tieba.js
 ;hostname = *.baidu.com, *.bdimg.com
 
-去掉知乎跳转第三方网站时的中间确认页面
+#去掉知乎跳转第三方网站时的中间确认页面
 ;hostname = link.zhihu.com
 ^https://link\.zhihu\.com/\?target=(https?)%3A//(.*) url 307 $1://$2
 
-知乎专栏底部推荐阅读文章直接打开（屏蔽跳转应用商店）
+#知乎专栏底部推荐阅读文章直接打开（屏蔽跳转应用商店）
 ;hostname = oia.zhihu.com
 ^https://oia\.zhihu\.com url 307 https://zhuanlan.zhihu.com
