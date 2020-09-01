@@ -1,0 +1,145 @@
+hostname = sapi.beingfine.cn, buy.itunes.apple.com,   links.jianshu.com, link.zhihu.com, www.google.*, encrypted.google.*, *.baidu.com, *.csdn.net, *.amemv.com,  *.blog.caixin.com,  api.bilibili.com,  api.xiaolanben.com,  www.fengread.com, www.zhihu.com, zhuanlan.zhihu.com,  www.google.cn, pan.baidu.com, *.bdimg.com,  oia.zhihu.com
+
+
+# 不背单词 内购全破解
+;hostname =   sapi.beingfine.cn
+^https:\/\/sapi\.beingfine\.cn\/v3\/report\/launch url script-response-body https://raw.githubusercontent.com/Seven3in/QuantumultX/master/JS/bbdc.js
+
+# Gear Unlock Pro （by LTribe）
+;hostname = buy.itunes.apple.com
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body Gear.js
+;hostname =   links.jianshu.com, link.zhihu.com, www.google.*, encrypted.google.*
+^http:\/\/www\.google\..* url script-response-body endless.js
+^https:\/\/www\.google\..* url script-response-body endless.js
+^https:\/\/encrypted\.google\..* url script-response-body endless.js
+
+#通话录音破解
+http:\/\/micro-tool-api\.foundao\.com\/orderPayCenterService\/user\/userInfo url script-response-body thly.js
+#熊猫助手黄金版By木木
+^http:/\/usapi.tongbu.com\/v.html url script-response-body https://raw.githubusercontent.com/Gx3dong/Surge/master/JS/xmzhs.js
+
+#CPU Dasher破解(By @syzzzf)
+#^https:\/\/p.+-buy\.itunes\.apple\.com\/WebObjects\/MZFinance.woa\/wa\/inAppRegrantPurchaseHistory url script-response-body nzw9314/Script/cupdasher.js
+#哔哩哔哩去广告
+^https:\/\/app\.bilibili\.com\/(search\/resource|x\/(resource\/show\/tab|v2\/(view|rank|feed|reply\/main|account\/mine))) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/Bilibili.js
+
+
+^https?:\/\/www\.zhihu\.com\/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36$2
+
+# 百度更换 UA
+;^https?:\/\/.*\.baidu\.com url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)$2
+
+;;hostname = *.baidu.com
+
+# 微博网页跳转登陆屏蔽
+https://m\.weibo\.cn/comments/hotflow.*max_id=.* url reject-dict
+
+# 知乎网页直接看
+^https://www\.zhihu\.com/question/ url script-response-body zhihu.js
+
+;hostname = www.zhihu.com
+
+
+.*:\/\/.*\.csdn\.net\/.* url script-response-body csdn.js
+
+
+;hostname = *.csdn.net
+
+;hostname = www.google.com
+// 以下两种方式任选其一
+// 通过 JS 修改
+https:\/\/www\.google\.com\/(m|search).+(q=[^&]+)&.+ url script-request-header https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/google/simplifyurl.js
+
+// 307 重定向，无需 JS。缺点是不能翻页、无法查看图片/视频等其他搜索项
+// https:\/\/www\.google\.com\/(m|search).+(q=[^&]+)&.+ url 307 $1?$2
+
+# 菜鸟裹裹去广告
+https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbnetflow\.guoappstartup\.ads\.show url reject
+https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.recommend url reject
+https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.show url reject
+
+http-request ^https:\/\/.*\.amemv\.com\/aweme\/v.*\/(feed|post) script-path=https://Choler.github.io/Surge/Script/Aweme.js
+http-response ^https:\/\/.*\.amemv\.com\/aweme\/v.*\/(feed|post) requires-body=true,script-path=https://Choler.github.io/Surge/Script/Aweme.js
+
+;hostname = *.amemv.com
+
+;hostname= *.blog.caixin.com
+.*\.blog\.caixin\.com/.* url script-response-body Caixin.js
+
+
+;hostname= www\.baidu\.com.*, www\.baidu\.com.*
+
+www\.baidu\.com.* url script-response-body Endless Google And Baidu.user.js
+www\.baidu\.com.* url script-response-body Endless Google And Baidu.user.js
+
+#哔哩哔哩全部解锁规则
+
+^https:\/\/api.bilibili.com\/pgc\/player\/api\/playurl url script-response-body bilibili.unblock.playurl.min.js
+^https:\/\/api.bilibili.com\/pgc\/view\/app\/season url script-response-body bilibili.unblock.season.min.js
+
+;hostname = api.bilibili.com
+
+# workingcopy
+^https:\/\/education\.github\.com\/api\/user$ url response-body "student":false response-body "student":true
+
+# 白描
+^https:\/\/baimiao\.uzero\.cn\/api\/v2\.user\/(logout|appLaunchWithUser|loginByWeixin) url script-response-body baimiao.js
+
+;hostname = api.xiaolanben.com
+#读者阅读限制
+^(http|https):\/\/[\w-]+\.fengread\.com\/tuwen\/appads\/ url reject-200
+https?:\/\/www\.fengread\.com\/(tuwen\/apktw\/bookv5|ebookreader\/fyhuserv5\/userinfo) url script-response-body https://ooxx.be/js/duzhe.js
+
+;hostname= www.fengread.com
+
+^(http|https):\/\/[\w-]+\.fengread\.com\/tuwen\/appads\/ url reject-200
+
+
+#知乎网页显示优化
+// 先重写到桌面版
+#^https:\/\/www\.zhihu\.com\/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (Windows Phone 10)$2
+// 再注入 CSS 进行优化
+^https:\/\/www\.zhihu\.com\/question url script-response-body https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/zhihux.user.js
+
+;hostname= www.zhihu.com
+
+
+;hostname= www.zhihu.com, zhuanlan.zhihu.com, 
+
+# 知乎网页去广告&推荐列表
+https://www\.zhihu\.com/api/v4/questions/\d+/related-readings url reject-200
+https://www\.zhihu\.com/api/v4/hot_recommendation url reject-200
+https://www\.zhihu\.com/commercial_api/banners_v3/mobile_banner url reject-200
+https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation url reject-200
+https://zhuanlan\.zhihu\.com/p/ url response-body apple\-itunes\-app response-body none
+
+
+#Google Maps重定向
+# > Google
+^https?:\/\/(www.)?g\.cn url 302 https:\/\/www.google.com
+^https?:\/\/(www.)?google\.cn url 302 https:\/\/www.google.com
+
+
+;hostname = www.google.cn
+
+#百度网盘手机页面优化
+^https:\/\/pan\.baidu\.com url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (Windows Phone 10)$2
+
+^https:\/\/pan\.baidu\.com url script-response-body https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/baiduPan.js
+
+;hostname = pan.baidu.com
+
+
+# 贴吧解除限制 
+^https?+:\/\/(?:c\.)?+tieba\.baidu\.com\/(?>f|p) url script-response-body tieba.js 
+^https?+:\/\/tiebac\.baidu\.com\/.* url script-response-body tieba.js 
+^https?+:\/\/jump2\.bdimg\.com\/(?>f|p) url script-response-body tieba.js
+;hostname = *.baidu.com, *.bdimg.com
+
+去掉知乎跳转第三方网站时的中间确认页面
+;hostname = link.zhihu.com
+^https://link\.zhihu\.com/\?target=(https?)%3A//(.*) url 307 $1://$2
+
+知乎专栏底部推荐阅读文章直接打开（屏蔽跳转应用商店）
+;hostname = oia.zhihu.com
+^https://oia\.zhihu\.com url 307 https://zhuanlan.zhihu.com
