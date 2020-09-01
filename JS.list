@@ -1,4 +1,4 @@
-hostname = sapi.beingfine.cn, buy.itunes.apple.com, links.jianshu.com, link.zhihu.com, www.google.*, encrypted.google.*, *.baidu.com, *.csdn.net, *.amemv.com, *.blog.caixin.com, api.bilibili.com, api.xiaolanben.com, www.fengread.com, www.zhihu.com, zhuanlan.zhihu.com, www.google.cn, pan.baidu.com, *.bdimg.com, oia.zhihu.com
+hostname = sapi.beingfine.cn, buy.itunes.apple.com, links.jianshu.com, link.zhihu.com, www.google.*, encrypted.google.*, *.baidu.com, *.csdn.net, *.amemv.com, *.blog.caixin.com, api.xiaolanben.com, www.fengread.com, www.zhihu.com, zhuanlan.zhihu.com, www.google.cn, pan.baidu.com, *.bdimg.com, oia.zhihu.com
 
 
 # 不背单词 内购全破解
@@ -61,15 +61,6 @@ https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.show u
 
 ;hostname= *.blog.caixin.com
 .*\.blog\.caixin\.com/.* url script-response-body Caixin.js
-
-
-
-#哔哩哔哩全部解锁规则
-
-^https:\/\/api.bilibili.com\/pgc\/player\/api\/playurl url script-response-body bilibili.unblock.playurl.min.js
-^https:\/\/api.bilibili.com\/pgc\/view\/app\/season url script-response-body bilibili.unblock.season.min.js
-
-;hostname = api.bilibili.com
 
 # workingcopy
 ^https:\/\/education\.github\.com\/api\/user$ url response-body "student":false response-body "student":true
