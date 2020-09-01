@@ -1,4 +1,4 @@
-hostname= proxy.vac.qq.com,  wzq.tenpay.com, api.inews.qq.com,  cccat.io,  m.manmanbuy.com, dominos0724.shjimang.com, m.xiaomiyoupin.com,  qqpet.jwetech.com
+hostname= proxy.vac.qq.com, wzq.tenpay.com, api.inews.qq.com, cccat.io, m.manmanbuy.com, dominos0724.shjimang.com, m.xiaomiyoupin.com, qqpet.jwetech.com
 #qq会员获取cookie
 ;hostname= proxy.vac.qq.com
 https:\/\/proxy.vac.qq.com\/cgi-bin\/srfentry.fcgi? url script-request-header https://raw.githubusercontent.com/lowking/Scripts/master/QQVip/qqVipCheckIn.js
