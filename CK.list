@@ -49,5 +49,5 @@ hostname = app.ymatou.com
 ^https:\/\/m\.xiaomiyoupin\.com\/api\/auth\/login\/isloggedin url script-request-header https://raw.githubusercontent.com/dompling/Script/master/xiaomiyp/xiaomiyp.cookie.js
 
 #QQ萌宠获取cookie
-https:\/\/qqpet.jwetech.com\/api\/authorizations url script-request-body https://raw.githubusercontent.com/lowking/Scripts/master/QQPet/lkQQPet.js
+https:\/\/qqpet.jwetech.com\/api\/authorizations url script-response-body https://raw.githubusercontent.com/lowking/Scripts/master/QQPet/lkQQPet.js
 ;hostname = qqpet.jwetech.com
