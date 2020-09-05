@@ -1,4 +1,4 @@
-hostname = sapi.beingfine.cn, buy.itunes.apple.com, links.jianshu.com, link.zhihu.com, www.google.*, encrypted.google.*, *.baidu.com, *.csdn.net, *.amemv.com, *.blog.caixin.com, api.xiaolanben.com, www.fengread.com, www.zhihu.com, zhuanlan.zhihu.com, www.google.cn, pan.baidu.com, *.bdimg.com, oia.zhihu.com
+hostname = sapi.beingfine.cn, buy.itunes.apple.com, links.jianshu.com, link.zhihu.com, www.google.*, encrypted.google.*, *.baidu.com, *.csdn.net, *.amemv.com, *.blog.caixin.com, api.xiaolanben.com, www.fengread.com, www.zhihu.com, zhuanlan.zhihu.com, www.google.cn, pan.baidu.com, *.bdimg.com, oia.zhihu.com, jdjoy.jd.com,draw.jdfcloud.com
 
 
 # 不背单词 内购全破解
@@ -126,3 +126,6 @@ https://zhuanlan\.zhihu\.com/p/ url response-body apple\-itunes\-app response-bo
 #知乎专栏底部推荐阅读文章直接打开（屏蔽跳转应用商店）
 ;hostname = oia.zhihu.com
 ^https://oia\.zhihu\.com url 307 https://zhuanlan.zhihu.com
+#聚宝盆投狗粮辅助
+;hostname = jdjoy.jd.com,draw.jdfcloud.com
+^https:\/\/jdjoy\.jd\.com\/pet\/getPetTreasureBox|^https:\/\/draw\.jdfcloud\.com\/\/pet\/getPetTreasureBox url script-response-body https://raw.githubusercontent.com/lxk0301/scripts/master/jd_petTreasureBox.js
