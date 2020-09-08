@@ -1,4 +1,4 @@
-hostname= proxy.vac.qq.com, wzq.tenpay.com, api.inews.qq.com, cccat.io, m.manmanbuy.com, dominos0724.shjimang.com, m.xiaomiyoupin.com, qqpet.jwetech.com
+hostname= proxy.vac.qq.com, wzq.tenpay.com, api.inews.qq.com, cccat.io, m.manmanbuy.com, dominos0724.shjimang.com, m.xiaomiyoupin.com, qqpet.jwetech.com, wq.jd.com, daojia.jd.com
 
 
 #qq会员获取cookie
@@ -51,3 +51,12 @@ hostname = app.ymatou.com
 #QQ萌宠获取cookie
 https:\/\/qqpet.jwetech.com\/api\/authorizations url script-response-body https://raw.githubusercontent.com/lowking/Scripts/master/QQPet/lkQQPet.js
 ;hostname = qqpet.jwetech.com
+#京喜app签到脚本
+#打开app首页，点击"任务赚金币",再点击"我的金币"即可
+;hostname = wq.jd.com
+https:\/\/wq\.jd\.com\/pgcenter\/sign\/QueryPGDetail\?sceneval=2&pageSize=20 url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js
+
+#京东到家签到及获取鲜豆
+#APP登陆账号后，点击首页'签到',即可获取Cookie.
+#hostname = daojia.jd.com
+https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js
