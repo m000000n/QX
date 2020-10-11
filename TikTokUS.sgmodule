@@ -1,11 +1,12 @@
-#!name=TikTok Unlock
-#!desc=Remove TikTok's regional restrictions.
+#!name=Unlock TikTok
+#!desc=解锁抖音(美区)
 #!system=ios
 
 [URL Rewrite]
-(?<=_region=)CN(?=&) US 307
-(?<=&app_version=)17..(?=.?.?&) 1 307
-(?<=\?version_code=)17..(?=.?.?&) 1 307
+^https://\S*.tiktokv.com/webcast/room/enter url response-body "data":\{\"message\":\"forbidden\",\"prompts\":\S* response-body "data":{}}
+(?<=(tiktokv|byteoversea|musical)\.(com|ly)/\S{0,9999}region=)CN(?=.*) US 307
+(?<=&app_version=)1[6-9]..(?=.?.?&) 100. 307
+(?<=\?version_code=)1[6-9]..(?=.?.?&) 100. 307
 
 [MITM]
-hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
+hostname = %INSERT% *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
