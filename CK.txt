@@ -1,3 +1,3 @@
-//微博通知
+#微博通知
 ^https:\/\/m\.weibo\.cn\/feed\/ url script-request-header https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js
 hostname = m.weibo.cn
