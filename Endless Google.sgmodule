@@ -1,0 +1,11 @@
+#!name=Endless Google
+#!desc=Remove Endless Google
+#!system=ios
+
+[MITM]
+hostname = %APPEND%  www.google.*, encrypted.google.*
+
+[Script]
+# Endless Google
+Endless Google=type=http-response, pattern=https:\/\/www\.google\..*, script-path=https://raw.githubusercontent.com/875793595/SY/main/endless.js, require-body=true
+Endless Google=type=http-response, pattern=https:\/\/encrypted\.google\..*, script-path=https://raw.githubusercontent.com/875793595/SY/main/endless.js, require-body=true
