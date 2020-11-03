@@ -79,7 +79,7 @@ cron "0 0 8,18 * * *" script-path=https://raw.githubusercontent.com/MeetaGit/Mee
 
 
 # Tartarus    https://github.com/Tartarus2014/Script
-cron "3 0 * * *" script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/DiDi.js, tag=滴滴出行
+cron "3 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js, tag=滴滴出行
 
 
 
@@ -91,7 +91,6 @@ cron "0 18 * * *" script-path=https://ooxx.be/js/maoyan.js, tag=猫眼
 
 
 # id77 https://github.com/id77/QuantumultX/tree/master
-;cron "10 12 25,1 * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/10000.js, tag=电信余额提醒
 cron "0 12 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js, tag=京东物流
 
 
@@ -101,7 +100,7 @@ cron "5 8 * * *" script-path=https://raw.githubusercontent.com/iisams/Scripts/ma
 
 
 # mw418  https://github.com/mw418/QuantumultX
-；cron "5 8 * * *" script-path=https://raw.githubusercontent.com/mw418/QuantumultX/master/setu.js, tag=每日色图
+cron "5 8 * * *" script-path=https://raw.githubusercontent.com/mw418/QuantumultX/master/setu.js, tag=每日色图
 
 
 # photonmang  https://github.com/photonmang/quantumultX
@@ -120,3 +119,5 @@ cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/mas
 小米有品_每日签到 = type=cron,cronexp=25 0 * * *,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/youpin/youpin_checkin.js
 叮咚买菜_每日签到 = type=cron,cronexp=20 0 * * *,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
 万达电影_每日签到 = type=cron,cronexp=35 0 * * *,timeout=10,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/wanda/wanda_checkin.js
+@zZPiglet
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/875793595/QX/master/DiDi_Tianjin.js, tag=滴滴出行天津
