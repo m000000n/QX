@@ -9,7 +9,6 @@ cron "0 9 8 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/m
 cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js, tag=奈雪
 cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Blibee/Blibee.js, tag=便利蜂
 cron "0 0 10,21 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean.js, tag=欧可林
-cron "0 18 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/MovieCalendar/MovieCalendar.js,豆瓣电影日历 
 cron "59 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js,tag=滴滴出行
 
 # By lxk0301   GitHub：https://github.com/lxk0301/scripts
@@ -72,10 +71,6 @@ cron "0 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Sc
 cron "10 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/icbc/icbc_sign.js, tag=工银e生活
 cron "10 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/jddj/jddj.js, tag=京东到家
 cron "10 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tie/tie_sign.js, tag=京东金融提额
-
-# MeetaGit    https://github.com/MeetaGit/MeetaRules/tree/master/Surge
-cron "0 0 8,18 * * *" script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules/master/Surge/Scripting/Calendar.js, tag=一言+历史上的今天
-
 
 # Tartarus    https://github.com/Tartarus2014/Script
 cron "3 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js, tag=滴滴出行
