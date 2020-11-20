@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND%  www.google.*, encrypted.google.*, weixin110.qq.com, app.bilibili.com, api.ithome.com, cube.elemecdn.com
+hostname = %APPEND%  www.google.*, encrypted.google.*, weixin110.qq.com, app.bilibili.com, api.ithome.com, cube.elemecdn.com, mbs.boc.cn
 
 [Script]
 # Endless Google
@@ -17,4 +17,8 @@ bilibili_ad = type=http-response,pattern=https:\/\/app\.bilibili\.com\/x\/v2\/fe
 ithome_ad = type=http-response,pattern=https:\/\/api\.ithome\.com\/json\/newslist\/news,script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/ithome_ad/ithome_ad.js,requires-body=true
 #hostname = api.ithome.com
 #中国银行去广告
+^https:\/\/mbs\.boc\.cn\/ubas-mgateway-webapp url reject 
+#mbs.boc.cn
+#饿了么去广告
+#cube.elemecdn.com
 ^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg ulr reject 
