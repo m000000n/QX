@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND%  www.google.*, encrypted.google.*, weixin110.qq.com, app.bilibili.com, api.ithome.com, cube.elemecdn.com, mbs.boc.cn
+hostname = %APPEND%  www.google.*, encrypted.google.*, weixin110.qq.com, app.bilibili.com, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com
 
 [Script]
 # Endless Google
@@ -23,3 +23,13 @@ ithome_ad = type=http-response,pattern=https:\/\/api\.ithome\.com\/json\/newslis
 #饿了么去广告
 #cube.elemecdn.com
 ^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg ulr reject 
+
+# 招行 App 去开屏广告，请测试并评论区反馈是否有其他影响。
+#1. 在重新安装app时，会打不开app，会报网络错误 (Thanks @Georgal)
+^https:\/\/mobile\.cmbchina\.com\/GExternal\/ClientConfigLoad\/GetClientCfg\.aspx - reject
+#hostname = %APPEND% mobile.cmbchina.com
+
+# 便利蜂去开屏广告：
+^https:\/\/cvsnotify-api\.blibee\.com\/cvs\/notify\/app\/banner\/v4 - reject
+#hostname = %INSERT% cvsnotify-api.blibee.com
+
