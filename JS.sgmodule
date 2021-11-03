@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com, ap?.bilibili.com,api.bilibili.com,app.bilibili.com, pan.baidu.com, mbd.baidu.com, mappsv5.caixin.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, guide-acs.m.taobao.com, vsco.co, mp.weixin.qq.com
+hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com, ap?.bilibili.com,api.bilibili.com,app.bilibili.com, pan.baidu.com, mbd.baidu.com, mappsv5.caixin.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, guide-acs.m.taobao.com, vsco.co, mp.weixin.qq.com, ap*.intsig.net
 [Script]
 # Endless Google
 EndlessGoogle = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
@@ -56,3 +56,5 @@ nf_rating_season.js = type=http-response,pattern=^https?:\/\/ios(-.*)?\.prod\.ft
 VSCO解锁 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
 ## 去微信公众号广告
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+
+CamScanner.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Worryfrees/script/main/Rewrites/other/CamScanner.js,type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
