@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com, api.bilibili.com, pan.baidu.com, mbd.baidu.com, mappsv5.caixin.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, guide-acs.m.taobao.com, vsco.co
+hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com, ap?.bilibili.com,api.bilibili.com,app.bilibili.com, pan.baidu.com, mbd.baidu.com, mappsv5.caixin.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, guide-acs.m.taobao.com, vsco.co, mp.weixin.qq.com
 [Script]
 # Endless Google
 EndlessGoogle = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
@@ -32,12 +32,10 @@ ithome_ad = type=http-response,pattern=https:\/\/api\.ithome\.com\/json\/newslis
 ^https:\/\/cvsnotify-api\.blibee\.com\/cvs\/notify\/app\/banner\/v4 - reject
 #hostname = %INSERT% cvsnotify-api.blibee.com
 
-#Bilibli番剧，自动切换地区
-此脚本仅适用于Surge4.0+ (iOS)
+## Bilibili港澳台番剧自动切换地区 & 显示豆瓣评分
+Bili Region = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+Bili Search = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/type\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 
-#您需要配置相关规则集（https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list）绑定相关select策略组，并且需要具有相关的区域代理服务器纳入您的子策略中。
-#最后，您可以通过BoxJs设置策略名和子策略名，或者手动填入脚本。
-#Bili Region = type=http-response,pattern=https:\/\/api\.bilibili\.com\/pgc\/view\/(v\d\/)?app\/season\?access_key,requires-body=1,max-size=0,control-api=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 
 #hostname = api.bilibili.com
 
@@ -56,3 +54,5 @@ nf_rating_season.js = type=http-response,pattern=^https?:\/\/ios(-.*)?\.prod\.ft
 淘票票豆瓣评分 = type=http-response, requires-body=1, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopshowapi\.getextendshowbyid, script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/TaoPiaoPiao/taopiaopiao.js
 # NobyDa的VSCO解锁
 VSCO解锁 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
+## 去微信公众号广告
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
