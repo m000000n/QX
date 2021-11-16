@@ -9,6 +9,15 @@ hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elem
 EndlessGoogle = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
 ^(http|https):\/\/(www.)?(g|google)\.(cn|com\.hk) https://www.google.com 302
 
+# > 爱奇艺 去暂停广告
+DOMAIN-SUFFIX, cupid.iqiyi.com,𝙍𝙀𝙅𝙀𝘾𝙏
+
+# > 优酷 去广告
+DOMAIN, iyes.youku.com,𝙍𝙀𝙅𝙀𝘾𝙏
+URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,𝙍𝙀𝙅𝙀𝘾𝙏-𝙏𝙄𝙉𝙔𝙂𝙄𝙁
+# > 京东 去广告
+URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,𝙍𝙀𝙅𝙀𝘾𝙏-𝙏𝙄𝙉𝙔𝙂𝙄𝙁
+
 #去掉B站APP推荐页的广告
 bilibili_ad = type=http-response,pattern=https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/bilibili_ad/bilibili_ad.js,requires-body=true
 #hostname = app.bilibili.com
