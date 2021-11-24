@@ -65,5 +65,9 @@ nf_rating_season.js = type=http-response,pattern=^https?:\/\/ios(-.*)?\.prod\.ft
 VSCO解锁 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
 ## 去微信公众号广告
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+# 朋友圈广告
+Moments = type=http-response,pattern=^https:\/\/mp\.weixin\.qq\.com\/mp\/(getappmsgext|getappmsgad),script-path=https://raw.githubusercontent.com/ATorNinja/Surge/master/WeChatAds.js,requires-body=true
 
+# 文章底部广告
+WeChatAds = type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ATorNinja/Surge/master/WeChat.js
 http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js
