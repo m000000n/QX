@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com, ap?.bilibili.com,api.bilibili.com,app.bilibili.com, pan.baidu.com, mbd.baidu.com, mappsv5.caixin.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, guide-acs.m.taobao.com, vsco.co, mp.weixin.qq.com, ap*.intsig.net
+hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com, ap?.bilibili.com,api.bilibili.com,app.bilibili.com, pan.baidu.com, mbd.baidu.com, mappsv5.caixin.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, guide-acs.m.taobao.com, vsco.co, mp.weixin.qq.com, ap*.intsig.net, ads.95516.com
 [Script]
 # Endless Google
 EndlessGoogle = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
@@ -11,6 +11,8 @@ EndlessGoogle = type=http-response,requires-body=1,pattern=^https?:\/\/www\.goog
 
 # > 爱奇艺 去暂停广告
 DOMAIN-SUFFIX, cupid.iqiyi.com,𝙍𝙀𝙅𝙀𝘾𝙏
+# 云闪付
+URL-REGEX,^https?+:\/\/(analytics|tysdk|ads)\.95516\.com _ reject-dict
 
 # > 优酷 去广告
 DOMAIN, iyes.youku.com,𝙍𝙀𝙅𝙀𝘾𝙏
@@ -26,15 +28,15 @@ ithome_ad = type=http-response,pattern=https:\/\/api\.ithome\.com\/json\/newslis
 #hostname = api.ithome.com
 
 #中国银行去广告
-^https:\/\/mbs\.boc\.cn\/ubas-mgateway-webapp url reject 
+URL-REGEX,^https:\/\/mbs\.boc\.cn\/ubas-mgateway-webapp url reject 
 #mbs.boc.cn
 #饿了么去广告
 #cube.elemecdn.com
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg ulr reject 
+URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg ulr reject 
 
 # 招行 App 去开屏广告，请测试并评论区反馈是否有其他影响。
 #1. 在重新安装app时，会打不开app，会报网络错误 (Thanks @Georgal)
-^https:\/\/mobile\.cmbchina\.com\/GExternal\/ClientConfigLoad\/GetClientCfg\.aspx - reject
+URL-REGEX,^https:\/\/mobile\.cmbchina\.com\/GExternal\/ClientConfigLoad\/GetClientCfg\.aspx - reject
 #hostname = %APPEND% mobile.cmbchina.com
 
 # 便利蜂去开屏广告：
