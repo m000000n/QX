@@ -1,0 +1,7 @@
+trojan=usugaki.ssss.monster:443, password=NTNGFTFRS4LJ5697, over-tls=true, tls-verification=true, fast-open=false, udp-relay=false, tag=trojan-tls-Usugaki - US
+trojan=mokuba.ssss.monster:443, password=NTNGFTFRS4LJ5697, over-tls=true, tls-verification=true, fast-open=false, udp-relay=false, tag=trojan-tls-Mokuba - JP
+trojan=yoroppa.ssss.monster:443, password=NTNGFTFRS4LJ5697, over-tls=true, tls-verification=true, fast-open=false, udp-relay=false, tag=trojan-tls-Yoroppa - MD
+
+trojan=usugaki.ssss.monster:443, password=8MEAHGQ6KUJ4FR69, over-tls=true, tls-verification=true, fast-open=false, udp-relay=false, tag=trojan-tls-Usugaki - US1
+trojan=mokuba.ssss.monster:443, password=8MEAHGQ6KUJ4FR69, over-tls=true, tls-verification=true, fast-open=false, udp-relay=false, tag=trojan-tls-Mokuba - JP1
+trojan=yoroppa.ssss.monster:443, password=8MEAHGQ6KUJ4FR69, over-tls=true, tls-verification=true, fast-open=false, udp-relay=false, tag=trojan-tls-Yoroppa - MD1
