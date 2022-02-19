@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com, ap?.bilibili.com,api.bilibili.com,app.bilibili.com, pan.baidu.com, mbd.baidu.com, mappsv5.caixin.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, guide-acs.m.taobao.com, vsco.co,mp.weixin.qq.com, security.wechat.com, weixin110.qq.com, ap*.intsig.net, ads.95516.com, tagit.hyhuo.com, *.bili*.*, 124.239.240.*, 101.89.57.66, 218.94.210.66, 240e:b1:9801:206:11:0:0:*,m.douban.com
+hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com, ap?.bilibili.com,api.bilibili.com,app.bilibili.com, pan.baidu.com, mbd.baidu.com, mappsv5.caixin.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, guide-acs.m.taobao.com, vsco.co,mp.weixin.qq.com, security.wechat.com, weixin110.qq.com, ap*.intsig.net, ads.95516.com, tagit.hyhuo.com
 [Script]
 # Endless Google
 EndlessGoogle = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
@@ -80,7 +80,3 @@ http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\
 拦截一百 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100SVIPCrack.js
 
 #hostname = tagit.hyhuo.com
-
-
-哔哩哔哩解锁大会员 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/ap(i|p)\.bilibili\.com\/bilibili\.\w{3,4}\..+\/(View|PlayView|PlayConf|PlayerOnline|MainList|ViewProgress)$,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/Script/BiLiBiLiBVIPCrack.js
-豆瓣电影和电视剧添加便捷播放按钮 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/ url $,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/DouBan.js
