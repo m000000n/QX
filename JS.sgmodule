@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com, ap?.bilibili.com,api.bilibili.com,app.bilibili.com, pan.baidu.com, mbd.baidu.com, mappsv5.caixin.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, guide-acs.m.taobao.com, vsco.co,mp.weixin.qq.com, security.wechat.com, weixin110.qq.com, ap*.intsig.net, ads.95516.com, tagit.hyhuo.com
+hostname = %APPEND%  www.google.*, encrypted.google.*, api.ithome.com, cube.elemecdn.com, mbs.boc.cn, mobile.cmbchina.com, cvsnotify-api.blibee.com, ap?.bilibili.com,api.bilibili.com,app.bilibili.com, pan.baidu.com, mbd.baidu.com, mappsv5.caixin.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, guide-acs.m.taobao.com, vsco.co,mp.weixin.qq.com, security.wechat.com, weixin110.qq.com, ap*.intsig.net, ads.95516.com
 [Script]
 # Endless Google
 EndlessGoogle = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
@@ -76,7 +76,3 @@ http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\
 ^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/ - reject
 ^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek|series|shop)) https://aweme.snssdk.com/aweme/v1/ header
 
-# > 拦截100
-拦截一百 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100SVIPCrack.js
-
-#hostname = tagit.hyhuo.com
